@@ -1,6 +1,4 @@
-// ========================================
 // ENHANCED ANIMATIONS SYSTEM
-// ========================================
 
 // Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -18,9 +16,7 @@ mobileLinks.forEach(link => {
     });
 });
 
-// ========================================
 // RIPPLE EFFECT FOR BUTTONS
-// ========================================
 function createRipple(event) {
     const button = event.currentTarget;
     const ripple = document.createElement('span');
@@ -46,9 +42,7 @@ document.querySelectorAll('.ripple-effect').forEach(button => {
     button.addEventListener('click', createRipple);
 });
 
-// ========================================
 // TYPING EFFECT FOR HERO
-// ========================================
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.textContent = '';
@@ -84,9 +78,7 @@ window.addEventListener('load', () => {
     }
 });
 
-// ========================================
 // ENHANCED INTERSECTION OBSERVER WITH STAGGER
-// ========================================
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -118,9 +110,7 @@ document.querySelectorAll('[data-animate-section]').forEach(section => {
     sectionObserver.observe(section);
 });
 
-// ========================================
 // DEMO TABS WITH SMOOTH TRANSITIONS
-// ========================================
 const demoTabs = document.querySelectorAll('.demo-tab');
 const demoContents = document.querySelectorAll('.demo-content');
 
@@ -152,9 +142,7 @@ demoTabs.forEach(tab => {
     });
 });
 
-// ========================================
 // DEMO FUNCTIONALITY - Generate Content
-// ========================================
 const generateBtn = document.getElementById('generateBtn');
 const generateInput = document.getElementById('generateInput');
 const generateOutput = document.getElementById('generateOutput');
@@ -200,9 +188,7 @@ generateBtn.addEventListener('click', () => {
     }, 1500);
 });
 
-// ========================================
 // DEMO FUNCTIONALITY - Rewrite Text
-// ========================================
 const rewriteBtn = document.getElementById('rewriteBtn');
 const rewriteInput = document.getElementById('rewriteInput');
 const rewriteOutput = document.getElementById('rewriteOutput');
@@ -257,9 +243,7 @@ rewriteBtn.addEventListener('click', () => {
     }, 1200);
 });
 
-// ========================================
 // DEMO FUNCTIONALITY - Grammar Check
-// ========================================
 const grammarBtn = document.getElementById('grammarBtn');
 const grammarInput = document.getElementById('grammarInput');
 const grammarOutput = document.getElementById('grammarOutput');
@@ -314,9 +298,7 @@ grammarBtn.addEventListener('click', () => {
     }, 1300);
 });
 
-// ========================================
 // CHATBOT FUNCTIONALITY WITH ANIMATIONS
-// ========================================
 const chatMessages = document.getElementById('chatMessages');
 const chatInput = document.getElementById('chatInput');
 const chatSendBtn = document.getElementById('chatSendBtn');
@@ -464,9 +446,7 @@ quickQuestionBtns.forEach(btn => {
     });
 });
 
-// ========================================
 // SMOOTH SCROLLING FOR ANCHOR LINKS
-// ========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -480,9 +460,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ========================================
 // PARALLAX SCROLL EFFECT
-// ========================================
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroContent = document.querySelector('.hero-content');
@@ -499,9 +477,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// ========================================
 // NUMBER COUNTER ANIMATION
-// ========================================
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
     const increment = target / (duration / 16);
@@ -534,9 +510,7 @@ document.querySelectorAll('[data-counter]').forEach(counter => {
     counterObserver.observe(counter);
 });
 
-// ========================================
 // NAVBAR SCROLL EFFECT
-// ========================================
 let lastScroll = 0;
 const navbar = document.querySelector('.nav-header');
 
@@ -552,8 +526,6 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// ========================================
 // CONSOLE LOG
-// ========================================
 console.log('%c🎨 Scribblr AI - Enhanced Animations Loaded! ', 'background: linear-gradient(to right, #8FEC78, #81DD67); color: white; font-size: 16px; padding: 10px; border-radius: 5px;');
 console.log('%c✨ Featuring: Typing effects, ripple buttons, staggered animations, smooth transitions, and more!', 'color: #8FEC78; font-size: 12px;');
