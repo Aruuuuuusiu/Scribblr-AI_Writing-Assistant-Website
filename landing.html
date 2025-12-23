@@ -7,114 +7,146 @@
     <link rel="stylesheet" href="landing-styles.css">
 </head>
 <body>
-    <!-- Navigation Header -->
-    <nav class="nav-header">
-        <div class="nav-container">
+    <!-- Navigation -->
+    <header class="nav-header">
+        <nav class="nav-container">
             <div class="nav-logo">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="32" height="32" rx="8" fill="#8FEC78"/>
-                    <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                    <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop stop-color="#8FEC78"/>
+                            <stop offset="1" stop-color="#81DD67"/>
+                        </linearGradient>
+                    </defs>
                 </svg>
                 <span class="logo-text">Scribblr AI</span>
             </div>
+
             <div class="nav-links">
                 <a href="#features" class="nav-link">Features</a>
                 <a href="#demo" class="nav-link">Live Demo</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
                 <a href="#comparison" class="nav-link">Compare</a>
             </div>
+
             <div class="nav-actions">
                 <button class="btn-secondary">Sign In</button>
                 <button class="btn-primary">Start Free Trial</button>
             </div>
+
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <line x1="3" y1="12" x2="21" y2="12" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="3" y1="6" x2="21" y2="6" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="3" y1="18" x2="21" y2="18" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M3 12h18M3 6h18M3 18h18" stroke-width="2" stroke-linecap="round"/>
                 </svg>
             </button>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#features" class="mobile-link">Features</a>
-        <a href="#demo" class="mobile-link">Live Demo</a>
-        <a href="#pricing" class="mobile-link">Pricing</a>
-        <a href="#comparison" class="mobile-link">Compare</a>
-        <button class="btn-secondary" style="width: 100%; margin-top: 1rem;">Sign In</button>
-        <button class="btn-primary" style="width: 100%; margin-top: 0.5rem;">Start Free Trial</button>
-    </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#features" class="mobile-link">Features</a>
+            <a href="#demo" class="mobile-link">Live Demo</a>
+            <a href="#pricing" class="mobile-link">Pricing</a>
+            <a href="#comparison" class="mobile-link">Compare</a>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Write Better, Faster with AI</h1>
-            <p class="hero-subtitle">Transform your writing with intelligent suggestions, instant rewrites, and grammar perfection. Join 50,000+ writers who trust Scribblr AI.</p>
-            <div class="hero-cta">
-                <button class="btn-primary btn-large">Start Writing for Free</button>
-                <button class="btn-secondary btn-large">Watch Demo Video</button>
+        <div class="hero-background-animation"></div>
+        <div class="hero-content" data-animate="hero">
+            <h1 class="hero-title">
+                <span class="typing-text" data-text="Write Better, Faster with AI"></span>
+                <span class="typing-cursor"></span>
+            </h1>
+            <p class="hero-subtitle" data-animate-delay="400">Transform your writing with intelligent suggestions, instant rewrites, and grammar perfection. Join 50,000+ writers who trust Scribblr AI.</p>
+            <div class="hero-cta" data-animate-delay="600">
+                <button class="btn-primary btn-large ripple-effect">Start Writing for Free</button>
+                <button class="btn-secondary btn-large ripple-effect">Watch Demo Video</button>
             </div>
-            <p class="hero-caption">No credit card required • 14-day free trial • Cancel anytime</p>
+            <p class="hero-caption" data-animate-delay="800">No credit card required • 14-day free trial • Cancel anytime</p>
         </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-element" style="top: 20%; left: 10%;">✨</div>
+        <div class="floating-element" style="top: 60%; right: 15%;">💡</div>
+        <div class="floating-element" style="bottom: 20%; left: 20%;">🚀</div>
     </section>
 
     <!-- Features Section -->
-    <section class="features-section" id="features">
+    <section id="features" class="features-section" data-animate-section>
         <div class="container">
-            <h2 class="section-title">Everything You Need to Write Perfectly</h2>
-            <p class="section-subtitle">Powerful AI features designed to elevate your writing</p>
+            <h2 class="section-title" data-animate="fadeInUp">Everything You Need to Write Perfectly</h2>
+            <p class="section-subtitle" data-animate="fadeInUp" data-animate-delay="100">Powerful AI features designed to elevate your writing</p>
+
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card" data-animate="fadeInUp" data-animate-delay="0">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
                         </svg>
                     </div>
                     <h3 class="feature-title">AI Content Generation</h3>
                     <p class="feature-description">Generate high-quality content from simple prompts. Create blog posts, emails, and marketing copy in seconds.</p>
                 </div>
-                <div class="feature-card">
+
+                <div class="feature-card" data-animate="fadeInUp" data-animate-delay="100">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/>
+                            <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/>
                         </svg>
                     </div>
                     <h3 class="feature-title">Smart Rewriting</h3>
                     <p class="feature-description">Improve clarity, tone, and style with intelligent rewriting suggestions. Make every sentence shine.</p>
                 </div>
-                <div class="feature-card">
+
+                <div class="feature-card" data-animate="fadeInUp" data-animate-delay="200">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <path d="M14 2v6h6"/>
+                            <path d="M16 13H8"/>
+                            <path d="M16 17H8"/>
+                            <path d="M10 9H8"/>
                         </svg>
                     </div>
                     <h3 class="feature-title">Grammar & Style</h3>
                     <p class="feature-description">Catch grammar mistakes, improve sentence structure, and enhance readability with real-time suggestions.</p>
                 </div>
-                <div class="feature-card">
+
+                <div class="feature-card" data-animate="fadeInUp" data-animate-delay="300">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
                         </svg>
                     </div>
                     <h3 class="feature-title">Tone Adjustment</h3>
                     <p class="feature-description">Switch between professional, casual, friendly, or formal tones to match your audience perfectly.</p>
                 </div>
-                <div class="feature-card">
+
+                <div class="feature-card" data-animate="fadeInUp" data-animate-delay="400">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/>
+                            <path d="M2 12h20"/>
                         </svg>
                     </div>
                     <h3 class="feature-title">Multiple Languages</h3>
                     <p class="feature-description">Write and edit in 50+ languages with native-level quality and cultural awareness.</p>
                 </div>
-                <div class="feature-card">
+
+                <div class="feature-card" data-animate="fadeInUp" data-animate-delay="500">
                     <div class="feature-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="15" x2="15" y2="15"/>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/>
+                            <path d="M13 2v7h7"/>
                         </svg>
                     </div>
                     <h3 class="feature-title">Templates Library</h3>
@@ -124,25 +156,24 @@
         </div>
     </section>
 
-    <!-- Live Demo Section -->
-    <section class="demo-section" id="demo">
+    <!-- Demo Section -->
+    <section id="demo" class="demo-section" data-animate-section>
         <div class="container">
-            <h2 class="section-title">See Scribblr AI in Action</h2>
-            <p class="section-subtitle">Try our AI writing tools right here, right now</p>
-            
-            <div class="demo-tabs">
+            <h2 class="section-title" data-animate="fadeInUp">See Scribblr AI in Action</h2>
+            <p class="section-subtitle" data-animate="fadeInUp" data-animate-delay="100">Try our AI writing tools right here, right now</p>
+
+            <div class="demo-tabs" data-animate="fadeInUp" data-animate-delay="200">
                 <button class="demo-tab active" data-tab="generate">Generate Content</button>
                 <button class="demo-tab" data-tab="rewrite">Rewrite Text</button>
                 <button class="demo-tab" data-tab="grammar">Fix Grammar</button>
             </div>
 
-            <!-- Generate Tab -->
-            <div class="demo-content active" id="generate-demo">
+            <div class="demo-content active" id="generate-demo" data-animate="fadeInUp" data-animate-delay="300">
                 <div class="demo-workspace">
                     <div class="demo-input-section">
                         <label class="demo-label">Enter your prompt:</label>
-                        <textarea class="demo-textarea" id="generateInput" placeholder="E.g., Write a professional email introducing our new product to potential customers..."></textarea>
-                        <button class="btn-primary" id="generateBtn">Generate Content</button>
+                        <textarea class="demo-textarea" id="generateInput" placeholder="e.g., Write a professional email about a new product launch..."></textarea>
+                        <button class="btn-primary ripple-effect" id="generateBtn">Generate Content</button>
                     </div>
                     <div class="demo-output-section">
                         <label class="demo-label">AI Generated Result:</label>
@@ -153,13 +184,12 @@
                 </div>
             </div>
 
-            <!-- Rewrite Tab -->
             <div class="demo-content" id="rewrite-demo">
                 <div class="demo-workspace">
                     <div class="demo-input-section">
                         <label class="demo-label">Enter text to rewrite:</label>
                         <textarea class="demo-textarea" id="rewriteInput" placeholder="Paste your text here..."></textarea>
-                        <button class="btn-primary" id="rewriteBtn">Rewrite Text</button>
+                        <button class="btn-primary ripple-effect" id="rewriteBtn">Rewrite Text</button>
                     </div>
                     <div class="demo-output-section">
                         <label class="demo-label">Improved Version:</label>
@@ -170,13 +200,12 @@
                 </div>
             </div>
 
-            <!-- Grammar Tab -->
             <div class="demo-content" id="grammar-demo">
                 <div class="demo-workspace">
                     <div class="demo-input-section">
                         <label class="demo-label">Enter text to check:</label>
-                        <textarea class="demo-textarea" id="grammarInput" placeholder="Paste your text here..."></textarea>
-                        <button class="btn-primary" id="grammarBtn">Check Grammar</button>
+                        <textarea class="demo-textarea" id="grammarInput" placeholder="Type or paste text to check for grammar errors..."></textarea>
+                        <button class="btn-primary ripple-effect" id="grammarBtn">Check Grammar</button>
                     </div>
                     <div class="demo-output-section">
                         <label class="demo-label">Corrected Text:</label>
@@ -190,14 +219,14 @@
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing-section" id="pricing">
+    <section id="pricing" class="pricing-section" data-animate-section>
         <div class="container">
-            <h2 class="section-title">Simple, Transparent Pricing</h2>
-            <p class="section-subtitle">Choose the perfect plan for your writing needs</p>
-            
+            <h2 class="section-title" data-animate="fadeInUp">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle" data-animate="fadeInUp" data-animate-delay="100">Choose the perfect plan for your writing needs</p>
+
             <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-badge">Free</div>
+                <div class="pricing-card" data-animate="scaleIn" data-animate-delay="0">
+                    <span class="pricing-badge">Free</span>
                     <h3 class="pricing-title">Free</h3>
                     <div class="pricing-price">
                         <span class="price-amount">$0</span>
@@ -207,40 +236,41 @@
                     <ul class="pricing-features">
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>5,000 words per month</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>Basic grammar checking</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>10 AI rewrites per day</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>Basic templates</span>
                         </li>
                         <li class="feature-item disabled">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#afb7b4" stroke-width="2">
-                                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"/>
+                                <line x1="6" y1="6" x2="18" y2="18"/>
                             </svg>
                             <span>Advanced AI features</span>
                         </li>
                     </ul>
-                    <button class="btn-secondary" style="width: 100%;">Get Started</button>
+                    <button class="btn-secondary ripple-effect" style="width: 100%;">Get Started</button>
                 </div>
 
-                <div class="pricing-card featured">
-                    <div class="pricing-badge popular">Most Popular</div>
+                <div class="pricing-card featured" data-animate="scaleIn" data-animate-delay="100">
+                    <span class="pricing-badge popular">Most Popular</span>
                     <h3 class="pricing-title">Pro</h3>
                     <div class="pricing-price">
                         <span class="price-amount">$29</span>
@@ -250,102 +280,102 @@
                     <ul class="pricing-features">
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>Unlimited words</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>Advanced grammar & style</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>Unlimited AI rewrites</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>100+ premium templates</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>Tone adjustment</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>Priority support</span>
                         </li>
                     </ul>
-                    <button class="btn-primary" style="width: 100%;">Start Free Trial</button>
+                    <button class="btn-primary ripple-effect" style="width: 100%;">Start Free Trial</button>
                 </div>
 
-                <div class="pricing-card">
-                    <div class="pricing-badge">Enterprise</div>
+                <div class="pricing-card" data-animate="scaleIn" data-animate-delay="200">
+                    <span class="pricing-badge">Enterprise</span>
                     <h3 class="pricing-title">Enterprise</h3>
                     <div class="pricing-price">
-                        <span class="price-amount">Custom</span>
+                        <span class="price-amount" style="font-size: 2rem;">Custom</span>
                     </div>
                     <p class="pricing-description">For teams and organizations</p>
                     <ul class="pricing-features">
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>Everything in Pro</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>Team collaboration</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>Custom AI training</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>API access</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>Dedicated account manager</span>
                         </li>
                         <li class="feature-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FEC78" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"/>
+                                <path d="M20 6L9 17l-5-5"/>
                             </svg>
                             <span>SLA guarantee</span>
                         </li>
                     </ul>
-                    <button class="btn-secondary" style="width: 100%;">Contact Sales</button>
+                    <button class="btn-secondary ripple-effect" style="width: 100%;">Contact Sales</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Comparison Section -->
-    <section class="comparison-section" id="comparison">
+    <section id="comparison" class="comparison-section" data-animate-section>
         <div class="container">
-            <h2 class="section-title">How Scribblr AI Compares</h2>
-            <p class="section-subtitle">See why writers are switching to Scribblr AI</p>
-            
-            <div class="comparison-table-wrapper">
+            <h2 class="section-title" data-animate="fadeInUp">How Scribblr AI Compares</h2>
+            <p class="section-subtitle" data-animate="fadeInUp" data-animate-delay="100">See why writers are switching to Scribblr AI</p>
+
+            <div class="comparison-table-wrapper" data-animate="fadeInUp" data-animate-delay="200">
                 <table class="comparison-table">
                     <thead>
                         <tr>
@@ -356,15 +386,15 @@
                                     <span class="badge-best">Best Value</span>
                                 </div>
                             </th>
-                            <th class="product-column">Grammarly</th>
-                            <th class="product-column">Jasper</th>
-                            <th class="product-column">Copy.ai</th>
+                            <th class="product-column"><span class="product-name">Grammarly</span></th>
+                            <th class="product-column"><span class="product-name">Jasper</span></th>
+                            <th class="product-column"><span class="product-name">Copy.ai</span></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="feature-name">Starting Price</td>
-                            <td class="highlight"><strong>$0/month</strong></td>
+                            <td class="highlight">$0/month</td>
                             <td>$12/month</td>
                             <td>$39/month</td>
                             <td>$36/month</td>
@@ -399,14 +429,14 @@
                         </tr>
                         <tr>
                             <td class="feature-name">Templates Library</td>
-                            <td class="highlight"><strong>100+</strong></td>
+                            <td class="highlight">100+</td>
                             <td>Limited</td>
                             <td>50+</td>
                             <td>90+</td>
                         </tr>
                         <tr>
                             <td class="feature-name">Multi-Language Support</td>
-                            <td class="highlight"><strong>50+ languages</strong></td>
+                            <td class="highlight">50+ languages</td>
                             <td>30 languages</td>
                             <td>25 languages</td>
                             <td>29 languages</td>
@@ -427,7 +457,7 @@
                         </tr>
                         <tr>
                             <td class="feature-name">Free Plan Available</td>
-                            <td class="highlight"><strong>Yes</strong></td>
+                            <td class="highlight">Yes</td>
                             <td>Limited Free</td>
                             <td>No</td>
                             <td>Limited Free</td>
@@ -439,13 +469,13 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials-section">
+    <section class="testimonials-section" data-animate-section>
         <div class="container">
-            <h2 class="section-title">Trusted by 50,000+ Writers</h2>
-            <p class="section-subtitle">See what our users are saying</p>
-            
+            <h2 class="section-title" data-animate="fadeInUp">Trusted by 50,000+ Writers</h2>
+            <p class="section-subtitle" data-animate="fadeInUp" data-animate-delay="100">See what our users are saying</p>
+
             <div class="testimonials-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-animate="slideInLeft" data-animate-delay="0">
                     <div class="testimonial-rating">
                         <span class="star">★</span>
                         <span class="star">★</span>
@@ -455,14 +485,14 @@
                     </div>
                     <p class="testimonial-text">"Scribblr AI has completely transformed my content creation process. What used to take hours now takes minutes. The AI suggestions are incredibly accurate and help me write with more clarity and impact."</p>
                     <div class="testimonial-author">
-                        <div class="author-info">
+                        <div>
                             <div class="author-name">Sarah Johnson</div>
                             <div class="author-title">Content Marketing Manager</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-animate="slideInLeft" data-animate-delay="100">
                     <div class="testimonial-rating">
                         <span class="star">★</span>
                         <span class="star">★</span>
@@ -472,14 +502,14 @@
                     </div>
                     <p class="testimonial-text">"As a non-native English speaker, Scribblr AI has been a game-changer. The grammar suggestions are spot-on, and the tone adjustment feature helps me communicate professionally with confidence."</p>
                     <div class="testimonial-author">
-                        <div class="author-info">
+                        <div>
                             <div class="author-name">Michael Chen</div>
                             <div class="author-title">Freelance Writer</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-animate="slideInLeft" data-animate-delay="200">
                     <div class="testimonial-rating">
                         <span class="star">★</span>
                         <span class="star">★</span>
@@ -489,14 +519,14 @@
                     </div>
                     <p class="testimonial-text">"I've tried multiple AI writing tools, but Scribblr AI stands out with its intuitive interface and powerful features. The content generation is impressive, and the pricing is unbeatable."</p>
                     <div class="testimonial-author">
-                        <div class="author-info">
+                        <div>
                             <div class="author-name">Emily Rodriguez</div>
                             <div class="author-title">Blog Editor</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-animate="slideInLeft" data-animate-delay="300">
                     <div class="testimonial-rating">
                         <span class="star">★</span>
                         <span class="star">★</span>
@@ -506,14 +536,14 @@
                     </div>
                     <p class="testimonial-text">"Our entire marketing team uses Scribblr AI daily. It's helped us maintain consistent quality across all our content while significantly reducing editing time. Highly recommended!"</p>
                     <div class="testimonial-author">
-                        <div class="author-info">
+                        <div>
                             <div class="author-name">David Thompson</div>
                             <div class="author-title">Marketing Director</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-animate="slideInLeft" data-animate-delay="400">
                     <div class="testimonial-rating">
                         <span class="star">★</span>
                         <span class="star">★</span>
@@ -523,14 +553,14 @@
                     </div>
                     <p class="testimonial-text">"The rewriting feature is pure magic. It takes my rough drafts and polishes them into professional content. Scribblr AI understands context better than any tool I've used."</p>
                     <div class="testimonial-author">
-                        <div class="author-info">
+                        <div>
                             <div class="author-name">Jessica Martinez</div>
                             <div class="author-title">Technical Writer</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="testimonial-card">
+                <div class="testimonial-card" data-animate="slideInLeft" data-animate-delay="500">
                     <div class="testimonial-rating">
                         <span class="star">★</span>
                         <span class="star">★</span>
@@ -540,7 +570,7 @@
                     </div>
                     <p class="testimonial-text">"Best investment for my business. Scribblr AI helps me write compelling emails, social posts, and product descriptions. My engagement rates have doubled since I started using it."</p>
                     <div class="testimonial-author">
-                        <div class="author-info">
+                        <div>
                             <div class="author-name">Robert Lee</div>
                             <div class="author-title">E-commerce Owner</div>
                         </div>
@@ -551,45 +581,46 @@
     </section>
 
     <!-- Chatbot Section -->
-    <section class="chatbot-section">
+    <section class="chatbot-section" data-animate-section>
         <div class="container">
-            <h2 class="section-title">Have Questions? Ask Our AI Assistant</h2>
-            <p class="section-subtitle">Get instant answers about Scribblr AI</p>
-            
-            <div class="chatbot-container">
+            <h2 class="section-title" data-animate="fadeInUp">Have Questions? Ask Our AI Assistant</h2>
+            <p class="section-subtitle" data-animate="fadeInUp" data-animate-delay="100">Get instant answers about Scribblr AI</p>
+
+            <div class="chatbot-container" data-animate="scaleIn" data-animate-delay="200">
                 <div class="chatbot-messages" id="chatMessages">
                     <div class="chat-message bot-message">
                         <div class="message-content">
-                            <p>Hello! I'm your Scribblr AI assistant. How can I help you today?</p>
+                            <p style="margin: 0;">Hello! I'm your Scribblr AI assistant. How can I help you today?</p>
                         </div>
                     </div>
                 </div>
+                <div class="quick-questions">
+                    <button class="quick-question-btn" data-question="What features are included?">What features are included?</button>
+                    <button class="quick-question-btn" data-question="Tell me about pricing">Pricing information</button>
+                    <button class="quick-question-btn" data-question="How does the free trial work?">Free trial details</button>
+                </div>
                 <div class="chatbot-input-wrapper">
-                    <input type="text" class="chatbot-input" id="chatInput" placeholder="Ask anything about Scribblr AI...">
-                    <button class="chatbot-send-btn" id="chatSendBtn">
+                    <input type="text" class="chatbot-input" id="chatInput" placeholder="Type your question...">
+                    <button class="chatbot-send-btn ripple-effect" id="chatSendBtn">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <path d="M22 2L15 22l-4-9-9-4 20-7z"/>
                         </svg>
                     </button>
-                </div>
-                <div class="quick-questions">
-                    <button class="quick-question-btn" data-question="What features does Scribblr AI offer?">What features are included?</button>
-                    <button class="quick-question-btn" data-question="How much does Scribblr AI cost?">Pricing information</button>
-                    <button class="quick-question-btn" data-question="Is there a free trial?">Free trial details</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cta-section" data-animate-section>
         <div class="container">
-            <div class="cta-content">
+            <div class="cta-content" data-animate="zoomIn">
                 <h2 class="cta-title">Ready to Transform Your Writing?</h2>
                 <p class="cta-subtitle">Join thousands of writers who trust Scribblr AI. Start your free trial today—no credit card required.</p>
                 <div class="cta-buttons">
-                    <button class="btn-primary btn-large">Start Free 14-Day Trial</button>
-                    <button class="btn-secondary btn-large">Schedule a Demo</button>
+                    <button class="btn-primary btn-large ripple-effect pulse-animation">Start Free 14-Day Trial</button>
+                    <button class="btn-secondary btn-large ripple-effect">Schedule a Demo</button>
                 </div>
                 <p class="cta-caption">Cancel anytime • No credit card required • Full feature access</p>
             </div>
@@ -603,22 +634,30 @@
                 <div class="footer-column">
                     <div class="footer-logo">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="32" height="32" rx="8" fill="#8FEC78"/>
-                            <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop stop-color="#8FEC78"/>
+                                    <stop offset="1" stop-color="#81DD67"/>
+                                </linearGradient>
+                            </defs>
                         </svg>
                         <span class="footer-brand">Scribblr AI</span>
                     </div>
-                    <p class="footer-description">The intelligent writing assistant that helps you write better, faster, and with confidence.</p>
+                    <p class="footer-description">Transform your writing with AI-powered suggestions, grammar checking, and content generation.</p>
                 </div>
+
                 <div class="footer-column">
                     <h4 class="footer-heading">Product</h4>
                     <ul class="footer-links">
                         <li><a href="#features">Features</a></li>
                         <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#demo">Live Demo</a></li>
-                        <li><a href="#">Templates</a></li>
+                        <li><a href="#comparison">Comparison</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-column">
                     <h4 class="footer-heading">Company</h4>
                     <ul class="footer-links">
@@ -628,18 +667,30 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-column">
-                    <h4 class="footer-heading">Support</h4>
+                    <h4 class="footer-heading">Resources</h4>
                     <ul class="footer-links">
                         <li><a href="#">Help Center</a></li>
                         <li><a href="#">API Docs</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>© 2025 Scribblr AI. All rights reserved.</p>
+                <p>&copy; 2024 Scribblr AI. All rights reserved.</p>
             </div>
         </div>
     </footer>
